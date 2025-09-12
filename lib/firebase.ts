@@ -30,9 +30,8 @@ export interface Project {
 export interface Skill {
   name: string;
   level: number;
-  category: 'frontend' | 'backend' | 'tools';
+  category: "frontend" | "backend" | "tools";
 }
-
 
 export interface ContactFormData {
   name: string;
