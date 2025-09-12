@@ -163,7 +163,7 @@ const SkillsPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -171,7 +171,7 @@ const SkillsPage: React.FC = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"
+            className="text-4xl md:text-5xl font-bold text-white mb-4"
           >
             Skills &{" "}
             <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
@@ -182,7 +182,7 @@ const SkillsPage: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+            className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
             Here are the technologies and tools I work with to create amazing
             digital experiences.
@@ -203,7 +203,7 @@ const SkillsPage: React.FC = () => {
               className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                 activeCategory === category.id
                   ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg"
-                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 shadow-md"
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700 shadow-md"
               }`}
             >
               {category.icon}
@@ -223,23 +223,19 @@ const SkillsPage: React.FC = () => {
             <motion.div
               key={skill.name}
               variants={itemVariants}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              className="bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="text-purple-600 dark:text-purple-400">
-                    {skill.icon}
-                  </div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">
-                    {skill.name}
-                  </h3>
+                  <div className="text-purple-400">{skill.icon}</div>
+                  <h3 className="font-semibold text-white">{skill.name}</h3>
                 </div>
-                <span className="text-sm font-medium text-purple-600 dark:text-purple-400">
+                <span className="text-sm font-medium text-purple-400">
                   {skill.level}%
                 </span>
               </div>
 
-              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+              <div className="w-full bg-gray-700 rounded-full h-2.5">
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: `${skill.level}%` }}
@@ -248,7 +244,7 @@ const SkillsPage: React.FC = () => {
                 />
               </div>
 
-              <div className="mt-3 flex justify-between text-xs text-gray-500 dark:text-gray-400">
+              <div className="mt-3 flex justify-between text-xs text-gray-500">
                 <span>Beginner</span>
                 <span>Expert</span>
               </div>
@@ -263,10 +259,10 @@ const SkillsPage: React.FC = () => {
             animate={{ opacity: 1 }}
             className="text-center py-12"
           >
-            <div className="text-gray-400 dark:text-gray-600 mb-4">
+            <div className="text-gray-600 mb-4">
               <Cpu size={64} className="mx-auto" />
             </div>
-            <p className="text-gray-600 dark:text-gray-400 text-lg">
+            <p className="text-gray-400 text-lg">
               No skills found in this category.
             </p>
           </motion.div>
@@ -279,35 +275,21 @@ const SkillsPage: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
-          <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-              1+
-            </div>
-            <div className="text-gray-600 dark:text-gray-400">
-              Years Experience
-            </div>
+          <div className="text-center p-6 bg-gray-800 rounded-xl shadow-lg">
+            <div className="text-3xl font-bold text-purple-400 mb-2">1+</div>
+            <div className="text-gray-400">Years Experience</div>
           </div>
-          <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-              1+
-            </div>
-            <div className="text-gray-600 dark:text-gray-400">
-              Projects Completed
-            </div>
+          <div className="text-center p-6 bg-gray-800 rounded-xl shadow-lg">
+            <div className="text-3xl font-bold text-purple-400 mb-2">1+</div>
+            <div className="text-gray-400">Projects Completed</div>
           </div>
-          <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-              10+
-            </div>
-            <div className="text-gray-600 dark:text-gray-400">Technologies</div>
+          <div className="text-center p-6 bg-gray-800 rounded-xl shadow-lg">
+            <div className="text-3xl font-bold text-purple-400 mb-2">10+</div>
+            <div className="text-gray-400">Technologies</div>
           </div>
-          <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-              2+
-            </div>
-            <div className="text-gray-600 dark:text-gray-400">
-              Happy Clients
-            </div>
+          <div className="text-center p-6 bg-gray-800 rounded-xl shadow-lg">
+            <div className="text-3xl font-bold text-purple-400 mb-2">2+</div>
+            <div className="text-gray-400">Happy Clients</div>
           </div>
         </motion.div>
       </div>

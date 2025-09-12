@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Menu, X,Palette } from "lucide-react";
+import { Menu, X, Palette } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,9 +53,7 @@ const Header: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg"
-          : "bg-white dark:bg-gray-900"
+        isScrolled ? "bg-gray-900/90 backdrop-blur-md shadow-lg" : "bg-gray-900"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,8 +77,8 @@ const Header: React.FC = () => {
                 onClick={() => scrollToSection(item.id)}
                 className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
                   activeTab === item.id
-                    ? "text-purple-600 dark:text-purple-400"
-                    : "text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+                    ? "text-purple-400"
+                    : "text-gray-300 hover:text-purple-400"
                 }`}
               >
                 {item.name}
@@ -95,7 +93,7 @@ const Header: React.FC = () => {
           <div className="md:hidden flex items-center space-x-2">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 focus:outline-none transition-colors"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-purple-400 focus:outline-none transition-colors"
               aria-expanded={isMenuOpen}
               aria-label="Toggle menu"
             >
@@ -107,21 +105,21 @@ const Header: React.FC = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 border-t dark:border-gray-700">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900 border-t border-gray-700">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors ${
                     activeTab === item.id
-                      ? "text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20"
-                      : "text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+                      ? "text-purple-400 bg-purple-900/20"
+                      : "text-gray-300 hover:text-purple-400 hover:bg-gray-800"
                   }`}
                 >
                   {item.name}
                 </button>
               ))}
-              <div className="pt-4 pb-3 border-t dark:border-gray-700">
+              <div className="pt-4 pb-3 border-t border-gray-700">
                 <button
                   onClick={() => scrollToSection("contact")}
                   className="block w-full px-4 py-2 text-center rounded-full font-medium bg-gradient-to-r from-purple-600 to-blue-500 text-white shadow-md hover:shadow-lg transition-all duration-300"

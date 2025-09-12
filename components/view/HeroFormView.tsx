@@ -9,31 +9,31 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center pt-20 pb-16 md:pt-24 md:pb-20 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800"
+      className="min-h-screen flex items-center pt-20 pb-16 md:pt-24 md:pb-20 bg-gradient-to-br from-gray-900 to-gray-800"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Teks Konten */}
           <div className="md:w-1/2 mb-10 md:mb-0 animate-fadeIn">
             <div className="mb-2">
-              <span className="inline-block px-4 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full text-sm font-medium">
+              <span className="inline-block px-4 py-1 bg-purple-900/30 text-purple-400 rounded-full text-sm font-medium">
                 👋 Hello, Welcome!
               </span>
             </div>
 
-            <h1 className="text-gray-800 dark:text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
               I&apos;m{" "}
               <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                 Muhamad Zagar Ainudin
               </span>
             </h1>
 
-            <p className="text-xl text-gray-700 dark:text-gray-300 font-medium mb-4 flex items-center">
+            <p className="text-xl text-gray-300 font-medium mb-4 flex items-center">
               <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
               Informatics Engineering Student at UDB
             </p>
 
-            <p className="text-gray-600 dark:text-gray-400 mb-8 text-lg leading-relaxed max-w-lg">
+            <p className="text-gray-400 mb-8 text-lg leading-relaxed max-w-lg">
               Passionate about creative fields like editing, programming, and
               drawing. Ready to grow and create unique works that make a
               difference!
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="rounded-full border-purple-600 text-purple-600 dark:border-purple-400 dark:text-purple-400 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-400 dark:hover:text-gray-900 transition-all duration-300 transform hover:-translate-y-1"
+                className="rounded-full border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-gray-900 transition-all duration-300 transform hover:-translate-y-1"
                 asChild
               >
                 <Link href="#contact">Contact Me</Link>
@@ -61,18 +61,16 @@ const Hero: React.FC = () => {
 
             {/* Social Links */}
             <div className="flex items-center mt-8 space-x-4">
-              <p className="text-gray-500 dark:text-gray-400 text-sm">
-                Follow me:
-              </p>
+              <p className="text-gray-400 text-sm">Follow me:</p>
               <div className="flex space-x-3">
                 <a
                   href="https://github.com/xozamhsw"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all duration-300 hover:shadow-md hover:border-purple-400 dark:hover:border-purple-400"
+                  className="w-10 h-10 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center transition-all duration-300 hover:shadow-md hover:border-purple-400"
                 >
                   <svg
-                    className="w-5 h-5 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
+                    className="w-5 h-5 text-gray-400 hover:text-purple-400"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -83,10 +81,10 @@ const Hero: React.FC = () => {
                   href="https://www.linkedin.com/in/muhamad-zagar-ainudin-370074375/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all duration-300 hover:shadow-md hover:border-blue-400 dark:hover:border-blue-400"
+                  className="w-10 h-10 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center transition-all duration-300 hover:shadow-md hover:border-blue-400"
                 >
                   <svg
-                    className="w-5 h-5 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                    className="w-5 h-5 text-gray-400 hover:text-blue-400"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -97,10 +95,10 @@ const Hero: React.FC = () => {
                   href="https://instagram.com/zagar_rrr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all duration-300 hover:shadow-md hover:border-pink-400 dark:hover:border-pink-400"
+                  className="w-10 h-10 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center transition-all duration-300 hover:shadow-md hover:border-pink-400"
                 >
                   <svg
-                    className="w-5 h-5 text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-400"
+                    className="w-5 h-5 text-gray-400 hover:text-pink-400"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -114,12 +112,12 @@ const Hero: React.FC = () => {
           {/* Bagian Profil - Foto dan Info */}
           <div className="md:w-2/5 flex flex-col items-center">
             {/* Foto Profil dengan Frame */}
-            <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl mb-8 group">
+            <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-gray-800 shadow-2xl mb-8 group">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-0"></div>
 
               <Image
-                src="/fotoformal.jpg" // Pastikan file profile.jpg ada di folder public
+                src="/formalbulat1.png" // Pastikan file profile.jpg ada di folder public
                 alt="Muhamad Zagar Ainudin"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -131,17 +129,17 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Info Profil Singkat */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg w-full max-w-xs">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 text-center">
+            <div className="bg-gray-800 rounded-2xl p-6 shadow-lg w-full max-w-xs">
+              <h3 className="text-lg font-semibold text-white mb-4 text-center">
                 Quick Info
               </h3>
 
               <div className="space-y-3">
                 <div className="flex items-center">
-                  <div className="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mr-3">
+                  <div className="w-8 h-8 rounded-full bg-purple-900/30 flex items-center justify-center mr-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-purple-600 dark:text-purple-400"
+                      className="h-4 w-4 text-purple-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -154,16 +152,14 @@ const Hero: React.FC = () => {
                       />
                     </svg>
                   </div>
-                  <span className="text-gray-600 dark:text-gray-400">
-                    19 Years
-                  </span>
+                  <span className="text-gray-400">19 Years</span>
                 </div>
 
                 <div className="flex items-center">
-                  <div className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-900/30 flex items-center justify-center mr-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-blue-600 dark:text-blue-400"
+                      className="h-4 w-4 text-blue-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -178,16 +174,14 @@ const Hero: React.FC = () => {
                       />
                     </svg>
                   </div>
-                  <span className="text-gray-600 dark:text-gray-400">
-                    Informatics Engineering
-                  </span>
+                  <span className="text-gray-400">Informatics Engineering</span>
                 </div>
 
                 <div className="flex items-center">
-                  <div className="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mr-3">
+                  <div className="w-8 h-8 rounded-full bg-purple-900/30 flex items-center justify-center mr-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-purple-600 dark:text-purple-400"
+                      className="h-4 w-4 text-purple-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -206,7 +200,7 @@ const Hero: React.FC = () => {
                       />
                     </svg>
                   </div>
-                  <span className="text-gray-600 dark:text-gray-400">
+                  <span className="text-gray-400">
                     Solo,JawaTengah,Indonesia
                   </span>
                 </div>

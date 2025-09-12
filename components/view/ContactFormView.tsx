@@ -91,16 +91,16 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Get In{" "}
             <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
               Touch
             </span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-xl text-gray-300">
             I&apos;d love to hear from you
           </p>
         </div>
@@ -108,70 +108,47 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            <div className="bg-gray-800 rounded-2xl shadow-lg p-8">
+              <h2 className="text-2xl font-bold text-white mb-6">
                 Contact Information
               </h2>
 
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mr-4">
-                    <Mail
-                      className="text-purple-600 dark:text-purple-400"
-                      size={24}
-                    />
+                  <div className="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center mr-4">
+                    <Mail className="text-purple-400" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
-                      Email
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      zagarmhsw@gmail.com
-                    </p>
+                    <h3 className="font-semibold text-white">Email</h3>
+                    <p className="text-gray-300">zagarmhsw@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-4">
-                    <Phone
-                      className="text-blue-600 dark:text-blue-400"
-                      size={24}
-                    />
+                  <div className="w-12 h-12 rounded-full bg-blue-900/30 flex items-center justify-center mr-4">
+                    <Phone className="text-blue-400" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
-                      Phone
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      +62 896-8105-8088
-                    </p>
+                    <h3 className="font-semibold text-white">Phone</h3>
+                    <p className="text-gray-300">+62 896-8105-8088</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mr-4">
-                    <MapPin
-                      className="text-purple-600 dark:text-purple-400"
-                      size={24}
-                    />
+                  <div className="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center mr-4">
+                    <MapPin className="text-purple-400" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
-                      Location
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      Solo, Indonesia
-                    </p>
+                    <h3 className="font-semibold text-white">Location</h3>
+                    <p className="text-gray-300">Solo, Indonesia</p>
                   </div>
                 </div>
               </div>
 
               {/* Additional Info */}
-              <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-3">
-                  Response Time
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+              <div className="mt-8 pt-6 border-t border-gray-700">
+                <h3 className="font-semibold text-white mb-3">Response Time</h3>
+                <p className="text-gray-300">
                   I typically respond to emails within 24 hours. For urgent
                   matters, please call or text.
                 </p>
@@ -181,19 +158,19 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <div>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            <div className="bg-gray-800 rounded-2xl shadow-lg p-8">
+              <h2 className="text-2xl font-bold text-white mb-6">
                 Send Message
               </h2>
 
               {submitStatus === "success" && (
-                <div className="bg-green-100 dark:bg-green-900/30 border border-green-400 dark:border-green-600 text-green-700 dark:text-green-300 px-4 py-3 rounded-lg mb-6">
+                <div className="bg-green-900/30 border border-green-600 text-green-300 px-4 py-3 rounded-lg mb-6">
                   Thank you for your message! I&apos;ll get back to you soon.
                 </div>
               )}
 
               {submitStatus === "error" && (
-                <div className="bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-600 text-red-700 dark:text-red-300 px-4 py-3 rounded-lg mb-6">
+                <div className="bg-red-900/30 border border-red-600 text-red-300 px-4 py-3 rounded-lg mb-6">
                   Sorry, there was an error sending your message. Please try
                   again.
                 </div>
@@ -203,7 +180,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-300 mb-2"
                   >
                     Name
                   </label>
@@ -212,20 +189,18 @@ export default function ContactPage() {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-700 text-white"
                     placeholder="Your name"
                   />
                   {errors.name && (
-                    <p className="text-red-600 dark:text-red-400 text-sm mt-1">
-                      {errors.name}
-                    </p>
+                    <p className="text-red-400 text-sm mt-1">{errors.name}</p>
                   )}
                 </div>
 
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-300 mb-2"
                   >
                     Email
                   </label>
@@ -234,20 +209,18 @@ export default function ContactPage() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-700 text-white"
                     placeholder="your.email@example.com"
                   />
                   {errors.email && (
-                    <p className="text-red-600 dark:text-red-400 text-sm mt-1">
-                      {errors.email}
-                    </p>
+                    <p className="text-red-400 text-sm mt-1">{errors.email}</p>
                   )}
                 </div>
 
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-300 mb-2"
                   >
                     Message
                   </label>
@@ -256,11 +229,11 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-700 text-white"
                     placeholder="Your message..."
                   />
                   {errors.message && (
-                    <p className="text-red-600 dark:text-red-400 text-sm mt-1">
+                    <p className="text-red-400 text-sm mt-1">
                       {errors.message}
                     </p>
                   )}
@@ -269,7 +242,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cur sor-not-allowed flex items-center justify-center"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>

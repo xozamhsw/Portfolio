@@ -111,38 +111,36 @@ const ProjectsFormView: React.FC = () => {
     return (
       <section
         id="projects"
-        className="py-20 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800"
+        className="py-20 bg-gradient-to-br from-gray-900 to-gray-800"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               My{" "}
               <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                 Projects
               </span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-              Loading projects...
-            </p>
+            <p className="text-xl text-gray-300">Loading projects...</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3].map((item) => (
               <div
                 key={item}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden animate-pulse"
+                className="bg-gray-800 rounded-xl shadow-lg overflow-hidden animate-pulse"
               >
-                <div className="h-48 bg-gray-300 dark:bg-gray-700"></div>
+                <div className="h-48 bg-gray-700"></div>
                 <div className="p-6">
-                  <div className="h-6 bg-gray-300 dark:bg-gray-700 rounded mb-4"></div>
-                  <div className="h-4 bg-gray-300 dark:bg-gray-700 rounded mb-2"></div>
-                  <div className="h-4 bg-gray-300 dark:bg-gray-700 rounded mb-4"></div>
+                  <div className="h-6 bg-gray-700 rounded mb-4"></div>
+                  <div className="h-4 bg-gray-700 rounded mb-2"></div>
+                  <div className="h-4 bg-gray-700 rounded mb-4"></div>
                   <div className="flex gap-2 mb-4">
-                    <div className="h-6 w-16 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
-                    <div className="h-6 w-20 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+                    <div className="h-6 w-16 bg-gray-700 rounded-full"></div>
+                    <div className="h-6 w-20 bg-gray-700 rounded-full"></div>
                   </div>
                   <div className="flex space-x-3">
-                    <div className="h-9 w-20 bg-gray-300 dark:bg-gray-700 rounded"></div>
-                    <div className="h-9 w-24 bg-gray-300 dark:bg-gray-700 rounded"></div>
+                    <div className="h-9 w-20 bg-gray-700 rounded"></div>
+                    <div className="h-9 w-24 bg-gray-700 rounded"></div>
                   </div>
                 </div>
               </div>
@@ -156,17 +154,17 @@ const ProjectsFormView: React.FC = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800"
+      className="py-20 bg-gradient-to-br from-gray-900 to-gray-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             My{" "}
             <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-xl text-gray-300">
             Here are some of my recent works
           </p>
         </div>
@@ -175,9 +173,9 @@ const ProjectsFormView: React.FC = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300"
+              className="bg-gray-800 rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300"
             >
-              <div className="h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden relative">
+              <div className="h-48 bg-gray-700 overflow-hidden relative">
                 <Image
                   src={project.imageUrl}
                   alt={project.title}
@@ -187,17 +185,17 @@ const ProjectsFormView: React.FC = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                <p className="text-gray-300 mb-4 line-clamp-3">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm rounded-full"
+                      className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full"
                     >
                       {tech}
                     </span>
@@ -209,7 +207,7 @@ const ProjectsFormView: React.FC = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center px-4 py-2 text-sm font-medium text-purple-600 dark:text-purple-400 border border-purple-600 dark:border-purple-400 rounded-full hover:bg-purple-600 hover:text-white dark:hover:bg-purple-400 dark:hover:text-gray-900 transition-colors duration-200"
+                      className="flex items-center px-4 py-2 text-sm font-medium text-purple-400 border border-purple-400 rounded-full hover:bg-purple-400 hover:text-gray-900 transition-colors duration-200"
                     >
                       <Github size={16} className="mr-1" />
                       Code
@@ -234,7 +232,7 @@ const ProjectsFormView: React.FC = () => {
 
         {projects.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-600 dark:text-gray-400 text-lg">
+            <p className="text-gray-400 text-lg">
               No projects found. Check back soon!
             </p>
           </div>
