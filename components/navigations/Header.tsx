@@ -1,13 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Menu, X, Palette, Sun, Moon } from "lucide-react";
+import { Menu, X,Palette } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState("Home");
-  const [darkMode, setDarkMode] = useState(false);
 
   // Efek untuk mendeteksi scroll
   useEffect(() => {
@@ -31,37 +30,6 @@ const Header: React.FC = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Efek untuk mode gelap/terang
-  useEffect(() => {
-    // Cek preferensi sistem atau local storage
-    const isDark =
-      localStorage.getItem("darkMode") === "true" ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches &&
-        localStorage.getItem("darkMode") !== "false");
-
-    setDarkMode(isDark);
-
-    // Terapkan ke document
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
-
-  // Toggle mode gelap/terang
-  const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-    localStorage.setItem("darkMode", newDarkMode.toString());
-
-    if (newDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  };
 
   // Fungsi untuk smooth scroll ke bagian tertentu
   const scrollToSection = (sectionId: string) => {
@@ -121,32 +89,10 @@ const Header: React.FC = () => {
                 )}
               </button>
             ))}
-
-            {/* Toggle Dark/Light Mode */}
-            <button
-              onClick={toggleDarkMode}
-              className="ml-2 p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
-              aria-label={
-                darkMode ? "Switch to light mode" : "Switch to dark mode"
-              }
-            >
-              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
           </nav>
 
-          {/* Mobile menu button dan toggle mode */}
+          {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* Toggle Dark/Light Mode */}
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
-              aria-label={
-                darkMode ? "Switch to light mode" : "Switch to dark mode"
-              }
-            >
-              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 focus:outline-none transition-colors"
