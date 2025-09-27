@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       },
     ],
+    unoptimized: false, // tetap gunakan optimisasi bawaan Next.js
+    dangerouslyAllowSVG: true, // kalau ada svg dari luar
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 };
 
