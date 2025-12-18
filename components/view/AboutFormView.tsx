@@ -155,13 +155,6 @@ export default function AboutFormView() {
                 Education
               </h2>
               <div className="space-y-6">
-                <div className="border-l-4 border-blue-500 pl-5 py-3 bg-blue-900/20 rounded-r-lg">
-                  <h3 className="text-lg font-semibold text-white">
-                    High-School
-                  </h3>
-                  <p className="text-gray-400">SMAN 6 SURAKARTA, 2021-2024</p>
-                  <p className="text-sm text-gray-500 mt-1">MIPA 6</p>
-                </div>
                 <div className="border-l-4 border-purple-500 pl-5 py-3 bg-purple-900/20 rounded-r-lg">
                   <h3 className="text-lg font-semibold text-white">
                     Bachelor of Informatics Engineering
@@ -171,14 +164,20 @@ export default function AboutFormView() {
                   </p>
                   <p className="text-sm text-gray-500 mt-1">Current GPA:-</p>
                 </div>
+                <div className="border-l-4 border-blue-500 pl-5 py-3 bg-blue-900/20 rounded-r-lg">
+                  <h3 className="text-lg font-semibold text-white">
+                    High-School
+                  </h3>
+                  <p className="text-gray-400">SMAN 6 SURAKARTA, 2021-2024</p>
+                  <p className="text-sm text-gray-500 mt-1">MIPA 6</p>
+                </div>
+
                 <div className="border-l-4 border-green-500 pl-5 py-3 bg-green-900/20 rounded-r-lg">
                   <h3 className="text-lg font-semibold text-white">
-                    UI/UX Design Fundamentals
+                    Junior High School
                   </h3>
-                  <p className="text-gray-400">Workshop Completion, 2023</p>
-                  <p className="text-sm text-gray-500 mt-1">
-                    User-centered design principles and prototyping
-                  </p>
+                  <p className="text-gray-400">SMPN 18 SURAKARTA, 2019-2021</p>
+                  <p className="text-sm text-gray-500 mt-1">SCINCE PROGRAM</p>
                 </div>
               </div>
             </div>

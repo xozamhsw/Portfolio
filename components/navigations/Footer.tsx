@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
               </p>
               <p className="flex items-center">
                 <Linkedin size={18} className="mr-3 text-blue-400" />
-                linkedin.com/in/muhamad zagar ainudin
+                linkedin.com/in/muhamad-zagar-ainudin-370074375
               </p>
               <p className="flex items-center">
                 <Github size={18} className="mr-3 text-gray-400" />

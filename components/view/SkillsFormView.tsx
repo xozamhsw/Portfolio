@@ -86,12 +86,12 @@ const SkillsPage: React.FC = () => {
         category: "devops",
         icon: <Cloud size={20} />,
       },
-      { name: "Git", level: 10, category: "devops", icon: <Cloud size={20} /> },
+      { name: "Git", level: 50, category: "devops", icon: <Cloud size={20} /> },
 
       // Design
       {
         name: "Figma",
-        level: 10,
+        level: 80,
         category: "design",
         icon: <Palette size={20} />,
       },
@@ -109,7 +109,7 @@ const SkillsPage: React.FC = () => {
       },
       {
         name: "Capcut",
-        level: 50,
+        level: 60,
         category: "design",
         icon: <Palette size={20} />,
       },
@@ -121,13 +121,13 @@ const SkillsPage: React.FC = () => {
       },
       {
         name: "UI/UX Design",
-        level: 10,
+        level: 80,
         category: "design",
         icon: <Palette size={20} />,
       },
       {
         name: "Canva",
-        level: 50,
+        level: 70,
         category: "design",
         icon: <Palette size={20} />,
       },
