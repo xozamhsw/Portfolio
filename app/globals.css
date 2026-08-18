@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #07070b;
+  --surface: #101018;
+  --text: #f7f7fb;
+  --muted: #a4a4b5;
+  --line: rgba(255,255,255,.09);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: Arial, Helvetica, sans-serif; }
+::selection { background: rgba(139,92,246,.35); color: white; }
+a, button, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+button, a { cursor: pointer; }
+section { scroll-margin-top: 92px; }
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .glass { background: rgba(16,16,24,.68); border: 1px solid var(--line); backdrop-filter: blur(18px); }
+  .grid-bg { background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 44px 44px; }
+}
